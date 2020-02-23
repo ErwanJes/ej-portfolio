@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body id="page-top">
+    <!-- Navigation -->
+    <a class="menu-toggle rounded" href="#">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a class="js-scroll-trigger" href="#page-top">Accueil</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#about">A Propos</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#services">Services</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#portfolio">Portfolio</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead d-flex">
+      <div class="container text-center my-auto">
+        <h1 class="mb-1">Erwan Jestin</h1>
+        <h3 class="mb-5">
+          <em>Développeur Web</em>
+        </h3>
+        <a id="cta-button" class="btn btn-primary js-scroll-trigger" href="#about">Plus d'info 
+          <span class="service-small-icon">
+            <i class="icon-arrow-down"></i>
+          </span>
+        </a>
+      </div>
+      <div class="overlay"></div>
+    </header>
+
+    <!-- About -->
+    <section class="content-section bg-primary text-white" id="about">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <div>
+              <img style="height:100px; overflow: hidden;" src="assets/img/jekyll.png" title="About" />
+            </div>
+          </div>
+          <div class="col-lg-10 mx-auto">
+            <br />
+            <div class="content-section-heading">
+              <h2 class="text-secondary mb-4">Bonjour.</h2>
+            </div>
+          </div>
+          <div class="col-lg-10 mx-auto">
+            <br />
+            <div>
+              <p class="mb-2 desc-font">Je suis développeur web passioné par la création de site Internet et en particulier de site statique : plus sûr, plus rapide, plus simple. Le meilleur pour commencer un vrai site Internet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="content-section bg-light text-center" id="services">
+      <div class="container">
+        <div class="content-section-heading">
+          <h2 class="text-secondary mb-4">Services</h2>
+          <!-- <h2 class="mb-5">Principaux</h2> -->
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <p class="mb-4">Je m'occupe de la création, du developpement de votre site Internet ainsi que de sa publication et maintenance.
+            <br />
+            Vous fournissez images et textes, je m'occupe du reste. <strong>Une vraie solution tout en UN.</strong></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+            <span class="service-icon rounded-circle mx-auto mb-3">
+              <i class="icon-screen-smartphone"></i>
+            </span>
+            <h4>
+              <strong>Design</strong>
+            </h4>
+            <p class="mb-0">Je m'occupe de la partie création et design du site Internet. Le site s'adaptera pour n'importe quel type d'écran (PC, smartphone...)</p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+            <span class="service-icon rounded-circle mx-auto mb-3">
+              <i class="icon-frame"></i>
+            </span>
+            <h4>
+              <strong>Développement</strong>
+            </h4>
+            <p class="mb-0">Je développe et j'adapte le site Internet à vos besoins.</p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+            <span class="service-icon rounded-circle mx-auto mb-3">
+              <i class="icon-share"></i>
+            </span>
+            <h4>
+              <strong>Publication</strong>
+            </h4>
+            <p class="mb-0">Une fois le site validé, je le publie avec le nom de domaine (nom utilisé dans le navigateur) de votre choix et je m'assure de son bon fonctionnement sur la durée.</p>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <span class="service-icon rounded-circle mx-auto mb-3">
+              <i class="icon-question"></i>
+            </span>
+            <h4>
+              <strong>Question ?</strong>
+            </h4>
+            <p class="mb-0">Ça m'intéresse, <a class="underline" href="mailto:{{ site.email }}" target="_blank">j'aimerai en savoir plus...</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="content-section" id="portfolio">
+      <div class="container">
+        <div class="content-section-heading text-center">
+          <h3 class="text-secondary mb-0">Portfolio</h3>
+          <h2 class="mb-5">Recent Projects</h2>
+        </div>
+        <div class="row no-gutters">
+          {% assign mid = site.posts | sort: 'date' %}
+          {% assign posts = mid | reverse %}
+          {% for post in posts limit:4 %}          
+            <div class="col-lg-6">
+              <a class="portfolio-item" href="{{ post.url | relative_url }}">
+                <span class="caption">
+                  <span class="caption-content">
+                    <h2>{{ post.title | escape }}</h2>
+                    <p class="mb-0">{{ post.subtitle | escape }}</p>
+                  </span>
+                </span>
+                <img class="img-fluid" src="assets/img/{{ post.poster | relative_url }}" alt="">
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    {% include footer.html %}
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{ "/assets/js/vendor/jquery.min.js" | relative_url }}"></script>
+    <script src="{{ "/assets/js/vendor/bootstrap.bundle.min.js" | relative_url }}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{{ "/assets/js/vendor/jquery.easing.min.js" | relative_url }}"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
+
+  </body>
+
+</html>
