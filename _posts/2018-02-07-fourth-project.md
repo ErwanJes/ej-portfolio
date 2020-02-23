@@ -3,7 +3,7 @@ layout: post
 title:  "Bootstrap Your Coding Skills"
 subtitle:  "How can we create a theme with Jekyll ?"
 date:   2018-02-07 21:40:47 +0100
-poster: "portfolio-4.jpg"
+poster: "bootstrap-screen.png"
 ---
 
 http://bootstrapyourcodingskills.com/

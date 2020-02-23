@@ -3,7 +3,7 @@ layout: post
 title:  "Chaussons Escalade"
 subtitle:  "Learn the basics of HTML & CSS"
 date:   2018-02-07 19:40:47 +0100
-poster: "portfolio-2.jpg"
+poster: "chaussons-screen-light.png"
 ---
 
 http://chaussons-escalade.fr/

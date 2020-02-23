@@ -3,7 +3,7 @@ layout: post
 title:  "Gite La Pillaudière"
 subtitle:  "Create your own page with Jekyll"
 date:   2018-02-07 18:40:47 +0100
-poster: "portfolio-1.jpg"
+poster: "gite-screen.png"
 ---
 
 http://www.gites-pillaudiere.com/
