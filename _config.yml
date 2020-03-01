@@ -23,7 +23,7 @@ email: erwan.jes@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   The portfolio of Erwan Jestin, a Web Developer based in Nantes, France.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://erwanjestin.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ErwanJes
 github_username:  ErwanJes
 
