@@ -6,7 +6,7 @@
 
   <div class="content_post container">
     <div class="lg-12">
-        <h2 class="content_post_title">{{ page.title }}</h2>
+      <a href="{{ page.website }}" target="_blank"><h2 class="content_post_title link">{{ page.title }}</h2></a>
     </div>
     <div class="lg-12">
         <h4 class="content_post_subtitle">{{ page.subtitle }}</h4>
@@ -14,14 +14,22 @@
     <div class="text-center">
       <div class="lg-10">
         <div class="poster">
-          {% if page.poster %}    
-          <img class="img-fluid" width="70%" src="{{ "assets/img/" | append:page.poster | relative_url }}" />
+          {% if page.poster %}
+          <a href="{{ page.website }}" target="_blank"><img class="img-fluid" width="70%" src="{{ "assets/img/portfolio/" | append:page.poster | relative_url }}" /></a>
           {% endif %}
         </div>
       </div>
     </div>
     <div class="lg-12 content_text">
       <p>{{ content }}</p>
+      <br />
+      <div class="text-center">
+        {% if page.website %}
+          <a id="contact-button" class="btn btn-primary" href="{{ page.website }}" target="_blank">Voir 
+            <i style="margin-left:10px;vertical-align: middle;" class="icon-link"></i>
+          </a>
+        {% endif %}
+      </div>
     </div>
   </div>
 
