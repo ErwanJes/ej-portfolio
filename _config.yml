@@ -29,6 +29,7 @@ github_username:  ErwanJes
 
 # Build settings
 theme: jekyll-theme-onepage
+remote_theme: ErwanJes/jekyll-theme-onepage
 plugins:
   - jekyll-feed
 
