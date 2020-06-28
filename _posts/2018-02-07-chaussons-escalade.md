@@ -7,6 +7,6 @@ poster: "chaussons-screen.jpg"
 website: http://chaussons-escalade.fr
 ---
 
-Il en existe différentes formes, de différentes matières, pour différentes pratiques et ce pour tous niveaux.
+Il existe différents chaussons d'escalade, différentes formes, différentes matières, différentes pratiques et ce pour tous niveaux. Il est difficile de s'y retrouver lorsque l'on n'est pas un expert.
 
 Nous vous avons pre-sélectionné les meilleures paires des chaussons d'escalade pour vous aider à trouver la paire parfaite pour vous. Indiquez votre pratique et vos préférences ci-dessous pour trouver les paires qui vous correspondent.
