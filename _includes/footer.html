@@ -21,3 +21,16 @@
     <p class="text-muted small mb-0">Copyright &copy; 2020 - <a href="mailto:{{ site.email }}" target="_blank" rel="noopener">Erwan Jestin</a></p>
   </div>
 </footer>
+
+<!-- Netlify CMS - redirect the user back to the /admin/ path -->
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
