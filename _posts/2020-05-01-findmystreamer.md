@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Find My Streamer (en)"
+title:  "Find My Streamer (anglais)"
 subtitle:  "Trouvez les streamers qui vous correspondent"
 date:   2020-05-01 18:40:47 +0100
 poster: "findstreamer-screen.png"
