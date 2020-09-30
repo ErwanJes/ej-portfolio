@@ -257,6 +257,14 @@ header .menu {
   }
 }
 
+.colored-link, .colored-link:active, .colored-link:visited {
+  color: #ecb807;
+}
+
+.colored-link:hover {
+  color: white;
+}
+
 #cta-button {
   font-weight: 500;
   font-size: 1.3em;
