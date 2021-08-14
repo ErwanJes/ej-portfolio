@@ -5,22 +5,25 @@
 
   <body id="page-top">
     <!-- Navigation -->
-    <a class="menu-toggle rounded" href="#">
-      <i class="fa fa-bars"></i>
+    <a class="menu-toggle clean" href="#">
+      <i class="icon-menu"></i>
     </a>
     <nav id="sidebar-wrapper">
-      <ul class="sidebar-nav">
+      <ul class="sidebar-nav text-center">
         <li class="sidebar-brand">
           <a class="js-scroll-trigger" href="#page-top">Accueil</a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#about">A Propos</a>
+          <a class="js-scroll-trigger" href="#concept">Concept</a>
         </li>
         <li class="sidebar-nav-item">
           <a class="js-scroll-trigger" href="#services">Services</a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#portfolio">Portfolio</a>
+          <a class="js-scroll-trigger" href="#portfolio">Projets</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#about">A Propos</a>
         </li>
         <li class="sidebar-nav-item">
           <a class="js-scroll-trigger" href="#contact">Contact</a>
@@ -29,167 +32,190 @@
     </nav>
 
     <!-- Header -->
-    <header class="masthead d-flex">
-      <div class="container text-center my-auto">
-        <h3 class="mb-0">
-          <img style="height:140px; overflow: hidden;" src="{{ "/assets/img/logo.png" | relative_url }}" title="EJ" />
-        </h3>
-        <h1 class="mb-1">Erwan Jestin</h1>
-        <h3 class="mb-5">
-          <em>Créateur de Site Web - Freelance</em>
-        </h3>
-        <a id="cta-button" class="btn btn-primary js-scroll-trigger" href="#about">Plus d'info 
-          <!-- <span class="service-small-icon"> -->
-            <i class="icon-arrow-down v-center small-left-padding"></i>
-          <!-- </span> -->
-        </a>
+    <header class="masthead">
+      <div class="container">
+        <div class="center-x">
+          <img id="logo" src="{{ "/assets/img/logo.png" | relative_url }}" title="EJ" />
+        </div>
+        <div class="text-center">
+          <h1>Erwan Jestin</h1>
+          <h3>Votre site Internet professionnel à votre image à partir de 60€ / mois</h3>
+          <br>
+          <a id="cta-button" class="btn btn-primary" href="http://typeform.com" target="_blank" rel="noopener">Calculer un devis</a>
+          <br><br><br>
+          <a class="btn btn-clear arrow js-scroll-trigger" href="#concept">
+            <i class="icon-arrow-down v-center"></i>
+          </a>
+        </div>
       </div>
-      <div class="overlay"></div>
     </header>
+      
+    <main>        
+      <!-- Concept -->
+      <section id="concept" class="main-section">
+        <div class="container">
+          <h2 class="title">Concept</h2>
+          <div class="section-content">
+            <p>Vous chercher un véritable site web sur-mesure ? Sans payer plusieurs dizaines de milliers d’euros ?</p>
+            <p>Bienvenue chez moi 👋 !</p>
+            <p>Je suis développeur et créateur de site Internet professionnel depuis plus d’une dizaine d’années. J’ai décidé de permettre à tous ceux qui le veulent d’avoir un site Internet bon marché mais fonctionnel, design et respectant tous les standards techniques.</p>
+            <p>Le fonctionnement est simple. Je créé ce qu’on appelle des sites statiques. Il n’y a aucune différence visuel avec les autres sites mais ils sont plus rapide à charger, plus sûr et globalement plus simple à créer. Par contre certaines fonctionnalités ne sont pas possible. Pour combler ce manque il est possible d’utiliser des services externes.</p>
+            <p>Grâce à ça vous pouvez avoir un site web entièrement fonctionnel à partir de 60€ par mois, en fonction de vos envies et de vos besoins. En plus du développement technique du site, je prends en charge le design, la mise en ligne et la maintenance sur la durée.</p>
+            <p><em>Pour résumer : je m'occupe de la création, du developpement de votre site Internet ainsi que de sa publication et maintenance. Vous fournissez images et textes, je m'occupe du reste. <span class="bold">Une vraie solution tout en UN.</span></em></p>
+            <p>Vous pouvez faire une <a href="http://typeform.com" class="yellow clean underline" target="_blank" rel="noopener">estimation de coût</a> pour en savoir plus !</p>
+            <p>A tout de suite 😄</p>
+          </div>
+        </div>
+      </section>
+      
 
-    <!-- About -->
-    <section class="content-section bg-primary text-white" id="about">
-      <div class="container text-center">
-        <div class="row">
-          <div class="col-lg-10 mx-auto">
-            <div>
-              <img style="height:100px; overflow: hidden;" src="assets/img/waving-hand.png" title="About" />
+      <!-- Services -->
+      <section id="services" class="main-section">
+        <div class="container">
+          <h2 class="title">Services</h2>
+          <div class="section-content">
+            <div class="section-content-service">
+              <div class="service-left-part">
+                <span class="service-icon rounded-circle">
+                  <i class="icon-screen-smartphone"></i>
+                </span>    
+              </div>
+              <div class="service-separator">
+                <div class="triangle"></div>
+              </div>
+              <div>
+                <h4 class="subtitle">Création</h4>
+                <p>Je m'occupe de toute la partie créative du site Internet : logo, charte graphique et design du site. Je prends en compte vos préférences esthétiques ou d'utilisation. Il est aussi possible de se baser sur l'existant.</p>
+                <p>Tous mes sites sont créés sûr-mesure, adapté à vos préférences et à vos envies.</p>
+              </div>
+            </div>
+            
+            <div class="section-content-service">
+              <div class="service-left-part">
+                <span class="service-icon rounded-circle">
+                  <i class="icon-frame"></i>
+                </span>    
+              </div>
+              <div class="service-separator">
+                <div class="triangle"></div>
+              </div>
+              <div>
+                <h4 class="subtitle">Développement</h4>
+                <p>Je développe votre site en me basant vos besoins tout en respectant toutes les standards techniques.</p>
+                <p>Je créé uniquement des sites statiques qui permettent une plus grande rapidité de chargement, plus de sécurité et une simplicité à prendre en main contrairement à la plupart des solutions du marché.</p>
+                <p>De plus tous mes sites s'adaptent automatiquement à la taille de l'écran : du smartphone à l'ordinateur de bureau.</p>
+              </div>
+            </div>
+            
+            <div class="section-content-service">
+              <div class="service-left-part">
+                <span class="service-icon rounded-circle">
+                  <i class="icon-share"></i>
+                </span>    
+              </div>
+              <div class="service-separator">
+                <div class="triangle"></div>
+              </div>
+              <div>
+                <h4 class="subtitle">Publication</h4>
+                <p>Une fois le site validé ensemble, je le publie avec le nom de domaine de votre choix. Je m'assure ensuite de son bon fonctionnement sur la durée.</p>
+                <p>Il est également possible de le mettre à jour quand vous voulez.</p>
+              </div>
             </div>
           </div>
-          <div class="col-lg-10 mx-auto">
-            <br />
-            <div class="content-section-heading">
-              <h2 class="text-secondary mb-4">Bonjour</h2>
-            </div>
-          </div>
-          <div class="col-lg-10 mx-auto">
-            <br />
-            <div>
-              <p class="mb-2 desc-font">Je suis développeur web passionné par la création de site Internet avec plus d'une dizaine d'années d'expérience dans ce domaine.
-              <p class="mb-2 desc-font">Je peux vous créer un site vitrine ou un site e-commerce via un CMS en fonction de vos besoins. Le principal avantage d'un CMS est de pouvoir être indépendant une fois le site réalisé. Vous pouvez modifier le contenu, les articles et les informations principales du site web.</p>
-              <p class="mb-2 desc-font">Je suis également fan des sites statiques : plus sûr, plus rapide, plus simple et donc plus économique. Il n'y aucune différence visuelle avec un site standard mais il est souvent beaucoup plus simple à créer et à maintenir. Pour en savoir plus je vous invite à lire un de mes articles sur le sujet : <a class="colored-link" href="http://bootstrapyourcodingskills.com/2017/03/02/site-statique/" target="_blank" rel="noopener">Qu'est-ce qu'un site statique ?</a></p>
-              <hr><br>
-              <p class="mb-2 desc-font">Je vous accompagne tout le long du projet pour développer la meilleure version possible de votre site Internet à moindre coût. Je peux prendre en charge le design, le développement ainsi que la maintenance totale du site créé, cela en fonction de vos besoins.</p>
-              <p class="mb-2 desc-font"><a class="colored-link" href="mailto:{{ site.email }}" target="_blank" rel="noopener">Contactez-moi</a> si vous voulez en savoir plus 🤓</p>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      
 
-    <!-- Services -->
-    <section class="content-section bg-light text-center" id="services">
-      <div class="container">
-        <div class="content-section-heading">
-          <h2 class="text-secondary mb-4">Services</h2>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <p class="mb-5 desc-font">Je m'occupe de la création, du developpement de votre site Internet ainsi que de sa publication et maintenance.
-            <br />
-            Vous fournissez images et textes, je m'occupe du reste. <strong>Une vraie solution tout en UN.</strong></p>
-          </div>
-        </div>
-        <div class="row mb-5">
-          <div class="col-lg-4 col-md-12 mb-5 mb-lg-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-screen-smartphone"></i>
-            </span>
-            <h4>
-              <strong>Design</strong>
-            </h4>
-            <p class="mb-0">Je m'occupe de la partie création et design du site Internet. Le site s'adaptera sur n'importe quel type d'écran (PC, smartphone...)</p>
-          </div>
-          <div class="col-lg-4 col-md-12 mb-5 mb-lg-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-frame"></i>
-            </span>
-            <h4>
-              <strong>Développement</strong>
-            </h4>
-            <p class="mb-0">Je développe et j'adapte le site Internet à vos besoins.</p>
-          </div>
-          <div class="col-lg-4 col-md-12 mb-5 mb-md-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-share"></i>
-            </span>
-            <h4>
-              <strong>Publication</strong>
-            </h4>
-            <p class="mb-0">Une fois le site validé, je le publie avec le nom de domaine (nom utilisé dans le navigateur) de votre choix et je m'assure de son bon fonctionnement sur la durée.</p>
-          </div>
-        </div>
-        <div id="contact" class="row">
-          <div class="col-lg-12">
-            <p class="desc-font">Un projet ou besoin d'aide pour mettre en place votre site Internet rapidement ?</p>
-          </div>
-            <br />
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <a id="contact-button" class="btn btn-primary" href="mailto:{{ site.email }}" target="_blank" rel="noopener">Me Contacter
-            <i class="v-center small-left-padding icon-envelope" style="padding-top:20px;"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Portfolio -->
-    <section class="content-section" id="portfolio">
-      <div class="container">
-        <div class="content-section-heading text-center">
-          <h3 class="text-secondary mb-0">Portfolio</h3>
-          <h2 class="mb-5">Projets Récents</h2>
-        </div>
-        <div class="row no-gutters">
-          {% assign posts = site.posts | sort: 'date' %}
-          {% assign sortedPosts = posts | reverse %}
-          {% for post in sortedPosts limit:4 %}          
-            <div class="col-lg-6 col-md-12">
-              <a class="portfolio-item" href="{{ post.url | relative_url }}">
-                <span class="caption">
-                  <span class="caption-container">
-                    <span class="caption-content">
-                      <h2><strong>{{ post.title | escape }}</strong></h2>
-                      <p class="mb-0">{{ post.subtitle | escape }}</p>
+      <!-- Portfolio -->
+      <section id="portfolio" class="main-section">
+        <div class="container">
+          <h2 class="title">Projets</h2>
+          <div class="section-content">
+            <div class="section-content-portfolio">
+              {% assign posts = site.categories['portfolio'] %}
+              {% assign posts_ordered_asc = posts | sort: 'date' %}
+              {% assign posts_ordered_desc = posts_ordered_asc | reverse %}
+              {% for post in posts_ordered_desc limit:4 %}
+                <a class="portfolio-item" href="{{ post.url | relative_url }}">
+                  <span class="caption">
+                    <span class="caption-container">
+                      <span class="caption-content">
+                        <h4>{{ post.title | escape }}</h4>
+                        <p>{{ post.subtitle | escape }}</p>
+                      </span>
                     </span>
                   </span>
-                </span>
-                <img class="img-fluid" src="assets/img/portfolio/{{ post.poster | relative_url }}" alt="">
-              </a>
+                  <img class="img-fluid" src="assets/img/portfolio/{{ post.poster | relative_url }}" alt="">
+                </a>
+              {% endfor %}
             </div>
-          {% endfor %}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+
+      <!-- About -->
+      <section id="about" class="main-section">
+        <div class="container">
+          <h2 class="title">A propos</h2>
+          <div class="section-content">
+            <div class="center-x">
+              <div class="profil-img">
+                <img src="{{ "/assets/img/profil.jpg" | relative_url }}" title="Photo de profil" />
+              </div>
+            </div>
+
+            <div class="space-v-1">
+              <p>Je suis développeur depuis plus d’une dizaine d’années. J’ai pu créer des sites Internet et des applications avec différentes technologies. Aujourd’hui je suis spécialisé dans la création de sites Internet statiques qui offrent de nombreux avantages et où les inconvénients peuvent être comblés de plus en plus facilement.</p>
+              <p>J’ai toujours été passionné par la création de site web, d’abord pour mes besoins personnels puis en tant que développeur et lead développeur salarié et maintenant pour d’autres personnes. Je fais toujours en sorte de créer des sites que je pourraient aimer et utiliser que ce soit pour mes propres projets ou non.</p>
+              <p>En plus de mes compétences techniques, j’ai toujours eu une appétence design que ce soit pour les logos, la charte graphique ou l’interface graphique des sites webs que je développe.</p>
+              <p>N'hésitez pas à <a class="clean underline" href="#contact">m'envoyer un message</a> si vous avez une question ou si vous voulez qu’on puisse parler directement.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+      <!-- Contact -->
+      <section id="contact" class="main-section">
+        <div class="container">
+          <h2 class="title">Contact</h2>
+          <div class="section-content">
+            <p>Si vous avez des questions ou des suggestions, n'hésitez pas à m'envoyer un message :</p>
+            <form>
+              <div class="form-group">
+                <label for="contact-name">Nom</label>
+                <input id="contact-name" class="form-control" type="text" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="contact-email">Email</label>
+                <input id="contact-email" class="form-control" type="email" placeholder="hello@provider.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" class="form-control" type="email" required></textarea>
+              </div>  
+              
+              <input type="submit" class="btn btn-secondary" value="Envoyer">            
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
 
     {% include footer.html %}
 
+    {% include js-include.html %}
+
+
     <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
-      <i class="fa fa-angle-up"></i>
+    <a class="scroll-to-top rounded-circle js-scroll-trigger clean" href="#page-top">
+      <i class="icon-arrow-up"></i>
     </a>
-
-    <!-- Bootstrap core JavaScript -->
-    <script defer src="{{ "/assets/js/vendor/jquery.min.js" | relative_url }}"></script>
-    <script defer src="{{ "/assets/js/vendor/bootstrap.bundle.min.js" | relative_url }}"></script>
-
-    <!-- Plugin JavaScript -->
-    <script defer src="{{ "/assets/js/vendor/jquery.easing.min.js" | relative_url }}"></script>
-
-    <!-- Custom scripts for this template -->
-    <script defer src="{{ "/assets/js/main.js" | relative_url }}"></script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-9257927-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-9257927-1');
-    </script>
 
   </body>
 

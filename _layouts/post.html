@@ -1,36 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include head.html %}
 
-  {% include header.html %}
+<head>
+  
+  {% include head-open.html %}
 
-  <div class="content_post container">
-    <div class="lg-12">
-      <a href="{{ page.website }}" target="_blank"><h2 class="content_post_title link">{{ page.title }}</h2></a>
+  <link href="{{ "assets/css/" | append:page.style_link | relative_url }}" rel="stylesheet">
+
+</head>
+
+<body>
+  
+  <!-- Header -->
+  <header class="post_header">
+    
+    <div class="container">
+      <nav class="post_nav_bar">
+        <ul class="clean half">
+          <li><a href="/#portfolio"><i class="icon-arrow-left v-center"></i><span class="small-left-padding">Retour</span></a></li>
+        </ul>
+        <a class="half" href="/"><img id="mini-logo" height="64px" src="{{ "/assets/img/logo-white.png" | relative_url }}" /></a>
+      </nav>
     </div>
-    <div class="lg-12">
-        <h4 class="content_post_subtitle">{{ page.subtitle }}</h4>
-    </div>
-    <div class="text-center">
-      <div class="lg-10">
-        <div class="poster">
-          {% if page.poster %}
-          <a href="{{ page.website }}" target="_blank"><img class="img-fluid" width="70%" src="{{ "assets/img/portfolio/" | append:page.poster | relative_url }}" /></a>
-          {% endif %}
+
+      <div class="container">
+        <div class="post_hero">
+        <div class="post_hero_left">
+          <h1 class="post_title">{{ page.title }}</h1>
+          <div class="post_title_bar_1"></div>
+          <div class="post_title_bar_2"></div>
+          <div class="post_cta">
+            <a class="btn btn-post" href="{{ page.website }}" target="_blank" rel="noopener">Visiter le site</a>
+          </div>
         </div>
       </div>
     </div>
-    <div class="lg-12 content_text">
-      <p>{{ content }}</p>
-      <br />
-      <div class="text-center">
-        {% if page.website %}
-          <a id="contact-button" class="btn btn-primary" href="{{ page.website }}" target="_blank">Voir 
-            <i style="margin-left:10px;vertical-align: middle;" class="icon-link"></i>
-          </a>
+  </header>
+
+  <main class="post-main">
+    <div class="container">
+
+      <div class="mockup">
+        {% if page.screenshot %}
+        <a href="{{ page.website }}" target="_blank"><img src="{{ "assets/img/portfolio/" | append:page.screenshot | relative_url }}" /></a>
         {% endif %}
       </div>
+
+      <div class="content_post">
+        <div class="content_post_left">
+          {{ page.content }}
+        </div>
+        <div class="content_post_right">
+          <div class="poster_parent">
+            <div class="poster">
+              <div class="poster_image poster_desktop">
+                <img src="{{ "assets/img/portfolio/" | append:page.full_desktop_screenshot | relative_url }}" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+  </main>
+
+  <div class="post_footer">
+    {% include footer.html %}
   </div>
+
+  {% include js-include.html %}
+</body>
 
 </html>
