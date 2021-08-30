@@ -15,7 +15,7 @@
   <header class="post_header">
     
     <div class="container">
-      <nav class="post_nav_bar">
+      <nav class="post_nav_bar light">
         <ul class="clean half">
           <li><a href="/#portfolio"><i class="icon-arrow-left v-center"></i><span class="small-left-padding">Retour</span></a></li>
         </ul>
@@ -54,10 +54,68 @@
           <div class="poster_parent">
             <div class="poster">
               <div class="poster_image poster_desktop">
-                <img src="{{ "assets/img/portfolio/" | append:page.full_desktop_screenshot | relative_url }}" />
+                <img class="img-fluid" src="{{ "assets/img/portfolio/" | append:page.full_desktop_screenshot | relative_url }}" />
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="post_others">
+      <div class="container">
+        <h2 class="text-center">Autres projets</h2>
+
+        <div class="post_other_navigation">
+          <!-- Get the next & previous post of this category -->
+          {% assign cat = page.categories[0] %}
+          {% assign cat_list = site.categories[cat] %}
+          {% for post in cat_list %}
+            {% if post.url == page.url %}
+              {% assign pOffset = forloop.index0 | minus: 1 %}
+              {% assign nOffset = pOffset | plus: 2 %}
+              {% if forloop.first == false %}
+                {% assign next_post = cat_list[pOffset] %}
+              {% endif %}
+              {% if forloop.last == false %}
+                {% assign previous_post = cat_list[nOffset] %}
+              {% endif %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+
+          {% if previous_post.url %}
+          <div>
+            <a class="portfolio-item-simple-link" href="{{ previous_post.url | relative_url }}">
+              <div class="portfolio-item-simple" style="background: url('/assets/img/portfolio/{{ previous_post.poster | relative_url }}'); background-repeat: no-repeat; background-size: contain;">
+                <div class="container_profile">
+                  <div class="container_profile_text">
+                    <h2>&laquo; {{ previous_post.title | escape }}</h2>
+                  </div>
+                  <img src="/assets/img/portfolio/{{ previous_post.poster | relative_url }}" />
+                </div>
+              </div>
+            </a>
+          </div>
+          {% endif %}
+
+          {% if next_post.url %}
+          
+          <div>
+            <a class="portfolio-item-simple-link" href="{{ next_post.url | relative_url }}">
+              <div class="portfolio-item-simple" style="background: url('/assets/img/portfolio/{{ next_post.poster | relative_url }}'); background-size: contain;">
+                <div class="container_profile">
+                  <img src="/assets/img/portfolio/{{ next_post.poster | relative_url }}" />
+                  <div class="container_profile_text">
+                    <h2>{{next_post.title}} &raquo;</h2>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          {% endif %}
+          
         </div>
       </div>
     </div>

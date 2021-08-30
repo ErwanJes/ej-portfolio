@@ -65,7 +65,7 @@ h2 {
 
 h3 {
   font-size: 1.1em;
-  font-weight: normal;
+  font-weight: lighter;
   color: #666666;
 }
 
@@ -102,6 +102,10 @@ a:active.clean>i {
 
 .text-center {
   text-align: center;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .center-x {
@@ -208,6 +212,22 @@ a:active.clean>i {
   display: none;
 }
 
+.normal-font p {
+  font-size: 1em;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
 
 /********************************************************/
 /********************** Structure ***********************/
@@ -414,9 +434,15 @@ header .menu {
 
 #logo {
   margin-top: 6em;
-  height:140px;
+  height: 140px;
   overflow: hidden;
 }
+
+/* .mini-logo {
+  margin-top: 1em;
+  height: 64px;
+  width: 64px;
+} */
 
 .arrow {
   font-size: 1.8rem;
@@ -494,7 +520,7 @@ header .menu {
   }
 
   .sidebar-nav li a:hover {
-    color: var(--main-dark-color); /*darker than 8db0a8;*/
+    color: var(--main-dark-color);
   }
 }
 
@@ -910,13 +936,21 @@ footer.footer .social-link:hover {
   margin-right: 20px;
   vertical-align: middle;
   display: inline-block;
-  transition: all 0.7s;
+  transition: transform 0.7s;
 }
 
 .post_nav_bar li a {
   font-size: 1.1em;
-  color: var(--light-color);
   text-decoration: none;
+}
+
+/*** Page ***/
+.page_nav_bar, .primary_color li a {
+  color: var(--main-primary-color);
+}
+
+.post_nav_bar, .light li a {
+  color: var(--light-color);
 }
 
 .post_nav_bar li:hover {
@@ -956,15 +990,16 @@ footer.footer .social-link:hover {
 
 .post_hero_left {
   position: relative;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .post_title {
-  padding-right: 6px;
+  /* padding-right: 6px; */
   font-size: 8rem;
   line-height: 1.1em;
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.15);
-  max-width: 70%;
+  max-width: 80%;
+  word-wrap: break-word;
 }
 
 .post_title_bar_1 {
@@ -972,7 +1007,7 @@ footer.footer .social-link:hover {
   content:"";
   width: 250px;
   border-radius: 10px;
-  animation: bar_1_slide 1s alternate infinite;
+  animation: bar_1_slide 1.2s ease-in-out 1s alternate infinite;
 }
 
 @keyframes bar_1_slide {
@@ -981,16 +1016,22 @@ footer.footer .social-link:hover {
   }
 
   to {
-    transform: translateX(40px);
+    transform: translateX(50px);
   }
 }
 
 .post_title_bar_2 {
-  margin: 20px 0 0 240px;
+  margin: 20px 0 0 20%;
   content:"";
   width: 250px;
   border-radius: 10px;
-  animation: bar_2_slide 2s alternate infinite;
+  animation: bar_2_slide 2.5s ease-in-out 1s alternate infinite;
+}
+
+@media (max-width: 950px) {
+  .post_title {
+    max-width: 100%;
+  }
 }
 
 @keyframes bar_2_slide {
@@ -999,7 +1040,7 @@ footer.footer .social-link:hover {
   }
 
   to {
-    transform: translateX(80px);
+    transform: translateX(100px);
   }
 }
 
@@ -1060,10 +1101,6 @@ footer.footer .social-link:hover {
   box-shadow: rgba(60, 64, 67, 0.3) 0 0 20px 10px;
 }
 
-.poster_parent img {
-  min-width: 700px;
-}
-
 .device-list li:not(:last-child) { 
   margin-right: 30px;  
 }
@@ -1081,7 +1118,64 @@ footer.footer .social-link:hover {
   color: var(--main-primary-color);
 }
 
-.post_footer {
+.post_others {
   margin-top: 4rem;
+  padding: 2rem 0 4em 0;
+  background-color: var(--main-primary-color);
+}
+
+.post_others h2 {
+  color: var(--light-color);
+}
+
+.post_other_navigation {
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.portfolio-item-simple {
+  width: 350px;
+  height: 300px;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.315);
+}
+
+.portfolio-item-simple .container_profile {
+  background-color: var(--main-dark-color);
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.portfolio-item-simple .container_profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-position: center;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.portfolio-item-simple .container_profile h2 {
+  font-size: 1.2rem;
+  color: var(--light-color);
+}
+
+.container_profile_text {
+  margin: 12px;
+}
+
+.portfolio-item-simple-link:hover  .container_profile h2 {
+  color: var(--main-primary-color);
+}
+
+.post_footer {
   box-shadow: rgb(0 0 0 / 45%) 0px 20px 20px 14px;
 }
