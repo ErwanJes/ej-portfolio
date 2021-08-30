@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body>
+    
+  {% include head.html %}
+
+  <body id="page-top">
+
+    <!-- Header -->
+  <header class="post_header">
+    
+    <div class="container">
+      <nav class="post_nav_bar primary_color">
+        <ul class="clean half text-left">
+          <li><a href="/"><i class="icon-arrow-left v-center"></i><span class="small-left-padding">Retour</span></a></li>
+        </ul>
+        <a class="half" href="/"><img id="mini-logo" height="64px" src="{{ "/assets/img/logo.png" | relative_url }}" /></a>
+      </nav>
+    </div>
+  </header>
+
+    <div class="container normal-font">
+      <main>
+        {{ content }}
+      </main>
+    </div>
+
+    {% include footer.html %}
+
+    {% include js-include.html %}
+  </body>
+
+</html>

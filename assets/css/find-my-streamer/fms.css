@@ -1,0 +1,47 @@
+:root {
+    --post-primary-color: rgb(52, 66, 112);
+    --post-secondary-color: #fff;
+    --post-secondary-hover-color: #f2b705;
+}
+
+.post_nav_bar li a:hover,
+.post_nav_bar li a:focus,
+.post_nav_bar li a:active {
+  color: var(--post-secondary-hover-color) !important;
+}
+
+
+.post_header {
+  background:
+  url('../../img/portfolio/find-my-streamer/hero.png') no-repeat,
+  linear-gradient(
+    rgb(78, 99, 167),
+    rgb(78, 99, 167)
+  );
+}
+
+.post_header::before{
+  background-color: var(--post-primary-color);
+}
+
+.post_title {
+  color: var(--post-secondary-color);
+}
+
+.post_title_bar_1 {
+  border-top: 6px solid var(--post-secondary-color);
+}
+
+.post_title_bar_2 {
+  border-top: 6px solid var(--post-secondary-color);
+}
+
+.btn-post {
+    font-size: 1.1em;
+    color: #fff !important;
+    border-color: var(--post-primary-color) !important;
+    background: linear-gradient(to right, var(--post-secondary-hover-color) 50%, var(--post-primary-color) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+}
