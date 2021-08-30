@@ -88,7 +88,7 @@
           {% if previous_post.url %}
           <div>
             <a class="portfolio-item-simple-link" href="{{ previous_post.url | relative_url }}">
-              <div class="portfolio-item-simple" style="background: url('/assets/img/portfolio/{{ previous_post.poster | relative_url }}'); background-repeat: no-repeat; background-size: contain;">
+              <div class="portfolio-item-simple" style="background: url('/assets/img/portfolio/{{ previous_post.poster | relative_url }}'); background-size: contain; background-repeat: no-repeat;">
                 <div class="container_profile">
                   <div class="container_profile_text">
                     <h2>&laquo; {{ previous_post.title | escape }}</h2>
@@ -104,7 +104,7 @@
           
           <div>
             <a class="portfolio-item-simple-link" href="{{ next_post.url | relative_url }}">
-              <div class="portfolio-item-simple" style="background: url('/assets/img/portfolio/{{ next_post.poster | relative_url }}'); background-size: contain;">
+              <div class="portfolio-item-simple" style="background: url('/assets/img/portfolio/{{ next_post.poster | relative_url }}'); background-size: contain; background-repeat: no-repeat;">
                 <div class="container_profile">
                   <img src="/assets/img/portfolio/{{ next_post.poster | relative_url }}" />
                   <div class="container_profile_text">
