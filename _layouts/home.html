@@ -183,7 +183,12 @@
           <h2 class="title">Contact</h2>
           <div class="section-content">
             <p>Si vous avez des questions ou des suggestions, n'hésitez pas à m'envoyer un message :</p>
-            <form>
+            <form action="https://api.web3forms.com/submit" method="POST">
+
+              <input type="hidden" name="apikey" value="be41bd71-ce4f-402a-a94c-55b094c1be87">
+              <input type="hidden" name="subject" value="Nouveau message - Erwan Jestin portfolio" />
+              <input type="hidden" name="redirect" value="https://web3forms.com/success" />
+
               <div class="form-group">
                 <label for="contact-name">Nom</label>
                 <input id="contact-name" class="form-control" type="text" required>
