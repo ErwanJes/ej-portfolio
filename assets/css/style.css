@@ -293,8 +293,12 @@ a:active.clean>i {
 }
 
 .btn-clear {
+  font-size: 1rem;
   box-shadow: unset;
-  font-weight: 700;
+  font-weight: 400;
+  border: 0;
+  padding: 0;
+  vertical-align: unset;
 }
 
 .btn-xl {
@@ -355,14 +359,6 @@ a:active.clean>i {
   color: #fff;
 }
 
-.yellow {
-  color: var(--secondary-color);
-}
-
-.yellow:hover, .yellow:focus, .yellow:active {
-  color: var(--secondary-color);
-}
-
 .btn-primary {
   color: #fff !important;
   border-color: var(--main-primary-color) !important;
@@ -393,6 +389,15 @@ a:active.clean>i {
 
 .btn-dark {
   color: #fff !important;
+}
+
+.btn-yellow {
+  color: var(--secondary-color);
+  background-color: transparent;
+}
+
+.btn-yellow:hover, .btn-yellow:focus, .btn-yellow:active {
+  color: white;
 }
 
 .bg-primary {
