@@ -2,7 +2,7 @@
 layout: page
 ---
 
-## Mentions légales
+# Mentions légales
 
 ### Editeur
 

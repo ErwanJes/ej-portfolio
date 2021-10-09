@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+  <!-- Header -->
+  <header class="post_header">
+
+    <div class="container">
+      <nav class="post_nav_bar primary_color">
+        <ul class="clean half text-left">
+          <li>
+            <a href="/"><i class="icon-arrow-left v-center"></i><span class="small-left-padding">Retour</span></a>
+          </li>
+        </ul>
+        <a class="half" href="/"><img id="mini-logo" height="64px" src="{{ "/assets/img/logo.png" | relative_url
+            }}" /></a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <br>
+    <h1>Articles</h1>
+    <div>
+      {% assign posts = site.categories['blog'] %}
+      {% assign posts_ordered_asc = posts | sort: 'date' %}
+      {% assign posts_ordered_desc = posts_ordered_asc | reverse %}
+      {% for post in posts_ordered_desc %}
+      <article class="blog-post {%comment%}post_class{%endcomment%}">
+        <header>
+          {% if post.poster %}
+          <div class="image-holder show">
+            <a href="{{ post.url | prepend: site.baseurl }}">
+              <img class="thumbnails" src="{{ site.baseurl }}/assets/img/blog/{{ post.poster }}">
+            </a>
+          </div>
+          <br>
+          {% endif %}
+
+          <h2><a class="clean" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+          <div class="meta">
+            <time datetime="{{ post.date | date: '%d-%m-%Y' }}">{{ post.date | date: "%B %-d %Y" }}</time> par <span rel="author" >Erwan</address>
+          </div>
+        </header>
+
+        <div class="text">
+          <p>{{ post.excerpt }}</p>
+          <a href="{{ post.url | prepend: site.baseurl }}" class="readmore">Lire la suite ➡️</a>
+        </div>
+      </article>
+      {% endfor %}
+
+
+      {%if paginator.previous_page%}
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="btn nav prev">
+        <span aria-hidden="true" data-icon=">"></span>
+        Articles récents
+      </a>
+      {% endif %}
+
+      {%if paginator.next_page%}
+      <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="btn nav next">
+        <span aria-hidden="true" data-icon=">"></span>
+        Articles précédents
+      </a>
+      {% endif %}
+
+    </div>
+  </div>
+
+  {% include footer.html %}
+
+  {% include js-include.html %}
+</body>
+
+</html>

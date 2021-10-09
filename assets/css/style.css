@@ -52,15 +52,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 6.5em;
-  margin: 0;
-  padding: 0;
-  font-weight: 500;
+  font-size: 3em;
 }
 
 h2 {
   font-size: 1.5em;
-  font-weight: 500;
 }
 
 h3 {
@@ -229,6 +225,15 @@ a:active.clean>i {
   background-color: #008CBA;
 }
 
+.meta {
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.right {
+  float: right;
+}
+
 /********************************************************/
 /********************** Structure ***********************/
 /********************************************************/
@@ -257,6 +262,17 @@ a:active.clean>i {
 /********************************************************/
 /********************** Controls ***********************/
 /********************************************************/
+
+#mini-logo {
+  margin-left: -32px;
+}
+
+.web-title {
+  font-size: 6.5em;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+}
 
 .btn {
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
@@ -1183,4 +1199,38 @@ footer.footer .social-link:hover {
 
 .post_footer {
   box-shadow: rgb(0 0 0 / 45%) 0px 20px 20px 14px;
+}
+
+/********************************************************/
+/********************** Blog ***********************/
+/********************************************************/
+
+.blog-post p, .blog-post {
+  font-size: 0.95rem;
+}
+
+.thumbnails {
+  width: 100%;
+  max-height: 200px;
+  object-fit: none;
+}
+
+.poster {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.blog-content h1 {
+  font-size: 2.5rem;
+  color: var(--main-dark-color);
+}
+
+.blog-content h2 {
+  color: var(--secondary-color);
+}
+
+.blog-content p {
+  font-size: 0.95rem;
+  margin: 1rem 0;
 }
