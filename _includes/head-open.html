@@ -6,9 +6,17 @@
 
 {% if page.title %}
   <title>Erwan Jestin - {{ page.title }}</title>
+  <meta property="og:title" content="Erwan Jestin - {{ page.title }}">
   {% else %}
   <title>Erwan Jestin - Créer votre site à partir de 60€ par mois</title>
+  <meta property="og:title" content="Erwan Jestin - Créer votre site à partir de 60€ par mois">
 {% endif %}
+
+<!-- OpenGraph metadata (social networks...) -->
+<meta property="og:url" content="{{ site.url }}" />
+<meta property="og:type" content="siteweb" />
+<meta property="og:image" content="{{ site.baseurl }}/assets/img/fullscreen.png" />
+<meta property="og:description" content="{{ site.description }}">
 
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
 <link href="{{ "/assets/css/vendor/simple-line-icons.css" | relative_url }}" rel="stylesheet">

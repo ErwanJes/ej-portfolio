@@ -22,7 +22,7 @@ title: Erwan Jestin - Portfolio
 author: Erwan Jestin
 email: hello@erwanjestin.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Le portefolio de Erwan Jestin, un développeur Web basé à Nantes en France
+  Votre site web professionnel sûr-mesure pour votre activité ou votre service
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://erwanjestin.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ErwanJes
