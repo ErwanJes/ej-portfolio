@@ -178,6 +178,37 @@
       </section>
       
 
+      <!-- Blog -->
+      <section id="blog" class="main-section">
+        <div class="container">
+          <h2 class="title">Derniers articles</h2>
+          <div class="section-content">
+            <div class="section-content-blog">
+              {% assign blog_posts = site.categories['blog'] %}
+              {% assign blog_posts_ordered_asc = blog_posts | sort: 'date' %}
+              {% assign blog_posts_ordered_desc = blog_posts_ordered_asc | reverse %}
+              {% for post in blog_posts_ordered_desc limit:5 %}
+              <article class="blog-post {%comment%}post_class{%endcomment%}">
+                <header>
+                  <h4><a class="small-title btn-yellow" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h4>
+                  <div class="meta">
+                    <time datetime="{{ post.date | date: '%d-%m-%Y' }}">{{ post.date | date: "%B %-d %Y" }}</time> par <span rel="author" >Erwan</address>
+                  </div>
+                </header>
+        
+                <div class="text">
+                  <p>{{ post.excerpt }}</p>
+                  <a class="btn-yellow post-link" href="{{ post.url | prepend: site.baseurl }}">Lire la suite</a>
+                </div>
+                <hr class="separator-line">
+              </article>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
       <!-- Contact -->
       <section id="contact" class="main-section">
         <div class="container">
@@ -205,7 +236,7 @@
                 <textarea id="contact-message" class="form-control" name="message" required></textarea>
               </div>  
               
-              <input type="submit" class="btn btn-secondary" value="Envoyer">            
+              <input type="submit" class="btn btn-primary" value="Envoyer">            
             </form>
           </div>
         </div>
