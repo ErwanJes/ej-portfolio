@@ -12,7 +12,7 @@ Ce site est édité par Erwan Jestin.
 - 38 rue des Olivettes
 - 44000 – NANTES
 
-Web : [erwanjestin.com](https://www.erwanjestin.com)
+Web : [erwanweb.fr](https://erwanweb.fr)
 
 ### Responsable de la rédaction
 
