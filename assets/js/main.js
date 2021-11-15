@@ -98,5 +98,5 @@ glowCookies.start('fr', {
   policyLink: base_url + '/pages/legal.html',
   acceptBtnBackground: '#4d8579',
   analytics: 'UA-9257927-1',
-  // facebookPixel: 'XXX',
+  facebookPixel: '322069842687176',
 });
