@@ -88,3 +88,15 @@ function onTypeformSubmit(data) {
   alert('onSubmit')
   console.log('form submitted', data)
 }
+
+// Manage GDPR
+
+var base_url = window.location.origin;
+
+glowCookies.start('fr', {
+  hideAfterClick: true,
+  policyLink: base_url + '/pages/legal.html',
+  acceptBtnBackground: '#4d8579',
+  analytics: 'UA-9257927-1',
+  // facebookPixel: 'XXX',
+});
