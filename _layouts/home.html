@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html amp lang="en">
 
   {% include head.html %}
 
@@ -35,7 +35,7 @@
     <header class="masthead">
       <div class="container">
         <div class="center-x">
-          <img id="logo" src="{{ "/assets/img/logo.png" | relative_url }}" title="EJ" />
+          <img id="logo" src="{{ "/assets/img/logo.png" | relative_url }}" width="140" height="140" title="EJ" />
         </div>
         <div class="text-center small-container">
           <h1 class="web-title no-margin">Création de site vitrine</h1>
@@ -146,7 +146,9 @@
                       </span>
                     </span>
                   </span>
-                  <img class="img-fluid" src="/assets/img/portfolio/{{ post.poster | relative_url }}" alt="">
+                  <amp-img width="470" height="267" class="img-fluid"
+                    src="/assets/img/portfolio/{{ post.poster | relative_url }}"
+                    alt="" />
                 </a>
               {% endfor %}
             </div>
@@ -162,7 +164,7 @@
           <div class="section-content">
             <div class="center-x">
               <div class="profil-img">
-                <img src="{{ "/assets/img/profil.jpg" | relative_url }}" title="Photo de profil" />
+                <img src="{{ "/assets/img/profil.jpg" | relative_url }}" width="140" height="140" title="Photo de profil" />
               </div>
             </div>
 
