@@ -1,5 +1,6 @@
 ---
 layout: page
+permalink: /legal/
 ---
 
 # Mentions légales

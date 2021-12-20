@@ -1,5 +1,6 @@
 ---
 layout: page
+permalink: /quote/
 ---
 <br>
 
