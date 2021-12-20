@@ -195,11 +195,10 @@
                   <div class="meta">
                     <time datetime="{{ post.date | date: '%d-%m-%Y' }}">{{ post.date | date: "%B %-d %Y" }}</time> par <span rel="author" >Erwan</address>
                   </div>
-                </header>
-        
+                </header>        
                 <div class="text">
-                  <p>{{ post.excerpt }}</p>
-                  <a class="btn-yellow post-link" href="{{ post.url | prepend: site.baseurl }}">Lire la suite</a>
+                  {{ post.excerpt }}
+                  <a class="btn-yellow post-link" href="{{ post.url | prepend: site.baseurl }}">Lire la suite...</a> 👀
                 </div>
                 <hr class="separator-line">
               </article>
