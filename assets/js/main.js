@@ -85,8 +85,7 @@ $('.map').on('click', onMapClickHandler);
 
 // Submit quote form
 function onTypeformSubmit(data) {
-  alert('onSubmit')
-  console.log('form submitted', data)
+  window.location.href = "/thanku/";
 }
 
 // Manage GDPR
