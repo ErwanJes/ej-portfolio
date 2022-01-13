@@ -482,7 +482,6 @@ header .menu {
   animation: slidein 1.3s alternate infinite;
 }
 
-
 @keyframes slidein {
   from {
     transform: translateY(-8px);
@@ -526,7 +525,7 @@ header .menu {
 
   #sidebar-wrapper {
     z-index: 2;
-    position: absolute;
+    position: fixed;
     top: 0;
     float: center;
     width: 100%;
@@ -554,6 +553,16 @@ header .menu {
 
   .sidebar-nav li a:hover {
     color: var(--main-dark-color);
+  }
+  
+  .menu-light-blur-background {
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
   }
 }
 

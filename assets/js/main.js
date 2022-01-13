@@ -16,12 +16,19 @@
   });
 
   // Scroll to top button appear
+  var menu = $('#sidebar-wrapper');
   $(document).scroll(function() {
     var scrollDistance = $(this).scrollTop();
     if (scrollDistance > 100) {
       $('.scroll-to-top').fadeIn();
+      if (!menu.hasClass('menu-light-blur-background')) {
+        menu.addClass('menu-light-blur-background');
+      }
     } else {
       $('.scroll-to-top').fadeOut();
+      if (menu.hasClass('menu-light-blur-background')) {
+        $('#sidebar-wrapper').removeClass('menu-light-blur-background');
+      }
     }
   });
 
