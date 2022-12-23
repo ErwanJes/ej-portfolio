@@ -47,9 +47,14 @@
 
         <div class="text">
           <p>{{ post.excerpt }}</p>
-          <a href="{{ post.url | prepend: site.baseurl }}" class="readmore">Lire la suite ➡️</a>
+          <a href="{{ post.url | prepend: site.baseurl }}" class="readmore clean">Lire la suite <i class="icon-arrow-right-circle v-center"></i></a>
         </div>
       </article>
+      <br />
+      {% if forloop.last == false %}
+      <hr>
+      <br />
+      {% endif %}
       {% endfor %}
 
 
@@ -68,6 +73,7 @@
       {% endif %}
 
     </div>
+    <br /><br /><br />
   </div>
 
   {% include footer.html %}
