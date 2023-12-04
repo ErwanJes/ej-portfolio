@@ -7,11 +7,9 @@ permalink: /legal/
 
 ### Editeur
 
-Ce site est édité par Erwan Jestin.
+Ce site est édité par EJ Development.
 
-- SIRET : 889 792 693 000 18
-- 38 rue des Olivettes
-- 44000 – NANTES
+SIRET : 948 655 568 00012
 
 Web : [erwanweb.fr](https://erwanweb.fr)
 
